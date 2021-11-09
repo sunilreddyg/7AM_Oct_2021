@@ -1,0 +1,25 @@
+Defects in Java Web Application:--->
+
+List of Defects:
+ 	Blank Page is Displayed.
+ 	Images are not Loding.
+ 	Spelling Mistakes and Allignments.
+ 	Invalid PopUp Messages.
+ 	Links are not Working.
+ 	Getting “Error On Page” on Status Bar of The Browser.
+ 	Java.lang.Exception.
+ 	Java.sql.SQL Exception.
+ 	Java.lang.Index Out of Bounds Exceptions.
+ 	HTML Code is Displayed on Application.
+ 	CODE is Displayed on Application.
+ 	Mandatory fields are not Displayed in RED Color.
+ 	Data Truncation.
+ 	Unable to view the Data from Database.
+ 	Able to add the Duplicate names When Field is Declared as Primary Key.
+ 	Remembering the Previous added values when trying to add New Group.
+ 	Getting the JavaScript Errors in Application.
+ 	Java.lang.Number Format Exception.
+ 	Java.lang.reflect.Invocation Targe Exception.
+ 	Displayed NULL Information in Application.
+ 	While adding the Invalid / Duplicate Values, Screens is not Waiting to Enter Valid 			data, Where as it is 	Going to Main Page.
+ 	While Working on Application, Getting Session Expired-RC1 end.
