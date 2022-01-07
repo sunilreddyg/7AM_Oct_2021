@@ -1,7 +1,6 @@
 package waitcommands;
 
 import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ExplicitWait_WaitFor_Visibilityof_Object {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		
 		
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\MINDQ\\Desktop\\new_drivers\\chromedriver.exe");
@@ -19,11 +19,37 @@ public class ExplicitWait_WaitFor_Visibilityof_Object {
 		driver.get("https://facebook.com");
 		driver.manage().window().maximize();
 		
-		
 		WebElement Email=driver.findElement(By.id("email"));
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOf(Email)).sendKeys("Hello");
-		System.out.println("Object is visible at webapge");
+		By Password_locator=By.id("pass");
+		
+
+		//enable explicit timeout on automation browser
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(50));
+		
+		wait.until(ExpectedConditions.visibilityOf(Email)).sendKeys("Darshan");
+		System.out.println("Email Object is Visible");
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated
+				(Password_locator)).sendKeys("Darsh123");
+		
+		System.out.println("Password object is visible");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
