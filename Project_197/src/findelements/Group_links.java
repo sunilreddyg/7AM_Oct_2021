@@ -18,7 +18,7 @@ public class Group_links
 		driver.manage().window().maximize();
 		
 		
-		WebElement Footer_Area=driver.findElement(By.xpath("/html/body/div[1]/section/footer/div/div[1]"));
+		WebElement Footer_Area=driver.findElement(By.xpath("//section/footer/div/div[1]"));
 		List<WebElement> Footer_links=Footer_Area.findElements(By.tagName("a"));
 		System.out.println("Size of footer links ---> "+Footer_links.size());
 		
@@ -29,15 +29,20 @@ public class Group_links
 			WebElement Eachlink=Footer_links.get(i);
 			//Get linkname
 			String linkname=Eachlink.getText();
-			System.out.println(linkname);
+			String linkhref=Eachlink.getAttribute("href");
+			//System.out.println(linkname+"    "+linkhref);
 	
-			Eachlink.click();
-			Thread.sleep(3000);
-			driver.get("https://www.instagram.com/");
+			driver.navigate().to(linkhref);
+			System.out.println(linkname+"  "+driver.getCurrentUrl());
+			Thread.sleep(4000);
+			
+			driver.navigate().back();
+			Thread.sleep(4000);
 			
 			//Restore all links to avoid staleElement reference exception
-			Footer_Area=driver.findElement(By.xpath("/html/body/div[1]/section/footer/div/div[1]"));
+			Footer_Area=driver.findElement(By.xpath("//section/footer/div/div[1]"));
 			Footer_links=Footer_Area.findElements(By.tagName("a"));
+			
 		}
 		
 		
